@@ -11,8 +11,8 @@
         android:id="@+id/myView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="277dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/btnClear"
@@ -23,4 +23,36 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/radioCRed"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioCRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Red"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="635dp" />
+
+        <RadioButton
+            android:id="@+id/radioCBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Blue"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="635dp" />
+    </RadioGroup>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

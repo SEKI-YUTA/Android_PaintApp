@@ -14,12 +14,14 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
     private var paint: Paint = Paint()
     private var drawX: Float = 0F
     private var drawY: Float = 0F
+    private var paintColor: Int = Color.RED
+    private var paintWidth: Float = 20F
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        paint.color = Color.BLUE
+        paint.color = paintColor
         paint.style = Paint.Style.STROKE
-        paint.strokeWidth = 20F
+        paint.strokeWidth = paintWidth
         canvas?.drawPath(path,paint)
     }
 
@@ -42,5 +44,13 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
     public fun clearCanvas() {
         path.reset()
         invalidate()
+    }
+
+    public fun changePaintColor(color: Int) {
+        paintColor = color
+    }
+
+    public fun changePaintWidth(width: Float) {
+        paintWidth = width
     }
 }
